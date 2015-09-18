@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='shortcut icon' href='icon.ico' type='image/x-icon'/ >
+<link rel="stylesheet" type="text/css" href="about.css">
+<title>About</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script> 
+	$(document).ready(function(){
+		var sourceSwap = function () {
+			var $this = $(this);
+			var newSource = $this.data('alt-src');
+			$this.data('alt-src', $this.attr('src'));
+			$this.attr('src', newSource);
+		}
+		$(function () {
+			$('img.icon').hover(sourceSwap, sourceSwap);
+		});
+		$("img.icon").click(function(){
+			alert("Thank you for following The Jasmine Dragon");
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<div id="icons"> 
+			<img class="icon" data-alt-src="facebookblue.png" src="facebook.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="twitterblue.png" src="twitter.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="googlered.png" src="google.png"style="height:25px; width:25px;"/>
+		</div>
+		<h1>Sneha Thakkar</h1>
+	</div>
+	<nav id="nav"> 
+		<a class="top" href="index.html">Home</a>		
+		<a class="top" href="about.html">About</a>		
+		<a class="top" href="menu.html">Projects</a>		
+		<a class="top" href="contact.html">Contact</a>
+	</nav>
+	<div id="main">
+		<a class="two" href="about.html">My Story</a>		
+		<a class="two" href="goals.html">My Goals</a>		
+		<a class="two" href="accomp.html">My Accomplishments</a>
+		<br/>
+		<br/>
+		<br/>
+		<h2>My Story</h2>
+		<img class="image" src="bground3.jpg"/> <!--taken from http://www.stupic.com/chinese-style-interior-design/unique-elegant-oriental-black-red-chinese-style-tea-shop-interior-design-3d-rendering/#bc and then edited-->
+		<p>On one cool summer night, I decided to try out a popular game among the teenage demographic: 8-Ball Pool. As one can probably guess, 8-Ball is a phone application and simulation of billiards. My first opponent that night was my cousin, who will henceforth be referred to as KT. KT was never a star student in school; he was never even close to being described as academically oriented. My obvious response to his request to challenge me in a game of 8-Ball was yes.  At the time I figured claiming victory in my first game would be simple since KT didnt even understand the fundamentals of physics. On the other hand, I had gotten an A on every physics integrative problem that I had attempted, and I had also gotten an A on all my geometry tests four years prior.   
+I started the first game, potting no balls. On his first shot, KT potted 3 balls: two striped, one solid. He took another turn to decide which type of ball would be his, and potted another striped ball. He took one more shot. And then another.  
+By the end of the game, I hadnt even had the chance to redeem myself from my first turn. He had potted all the balls, and I had potted none. There was a zero next to my name, and I refused to believe it was anything but sheer luck that won KT that first game. So I challenged him to another game. </p>
+<p>And then one more.</p> 
+<p>This pattern continued until I was out of game coins (I had played forty-five games), and each one ended in the same way as the first. My pride was crushed. How could someone who couldnt understand basic physics and math in the classroom defeat me in a practical application of what I had spent semesters mastering? </p>
+<p>This deflation of my superiority complex took me back to a mild Sunday afternoon in April of that same year. As I painted the interior of a dingy house on the south side of Chicago for volunteer hours, I glanced at the rich private school students next to me, who were incapable of the simple act of painting a wall; their strokes were uneven and jagged. At the end of the day as I sat on the rutted steps facing the street, an exhausted old woman came and planted herself next to me, probably because my shabby painting clothes were more familiar to her than those of the other kids. I guessed she was the owner of the house.  </p>
+<p>Thank you for your work, she said.</p> 
+<p>Oh it wasnt a problem, I replied with a fake smile, thinking: You should be thankful. That place was a mess.  </p>
+<p>I guess good things do come to those who work hard. Youd never guess how many jobs Ive worked in my life. But I put my kids through college, she beamed.</p> 
+<p>I learned through this conversation that although the woman was uneducated, her various employment pursuits supplied her with extensive knowledge in a multitude of areas. She was capable of fixing wiring in homes, refurbishing heating systems, and Latin dancing. Despite her hard life on the South Side with minimal book-knowledge, she was able to achieve lifelong learning. </p>
+<p>It was from this incidence that I learned how important experience was. As a level twenty-five player in 8-ball Pool, KT had had more experience in the playing field than I had despite my clear advantage in book knowledge. By showing humility before KT, an individual who had developed skills that I had yet to attain, I was able to learn his strategies and eventually beat him every time. Of course, academic knowledge is essential to my understanding of concepts, but experience is integral to real success. Experience makes all the difference.   </p>
+	</div>
+</body>
+</html>

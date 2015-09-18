@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='shortcut icon' href='icon.ico' type='image/x-icon'/ >
+<link rel="stylesheet" type="text/css" href="about.css">
+<title>About</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var sourceSwap = function () {
+			var $this = $(this);
+			var newSource = $this.data('alt-src');
+			$this.data('alt-src', $this.attr('src'));
+			$this.attr('src', newSource);
+		}
+		$(function () {
+			$('img.icon').hover(sourceSwap, sourceSwap);
+		});
+		$("img.icon").click(function(){
+			alert("Thank you for following The Jasmine Dragon");
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<div id="icons"> 
+			<img class="icon" data-alt-src="facebookblue.png" src="facebook.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="twitterblue.png" src="twitter.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="googlered.png" src="google.png"style="height:25px; width:25px;"/>
+		</div>
+		<h1>Sneha Thakkar</h1>
+	</div>
+	<nav id="nav">
+		<a class="top" href="index.html">Home</a>		
+		<a class="top" href="about.html">About</a>		
+		<a class="top" href="menu.html">Projects</a>		
+		<a class="top" href="contact.html">Contact</a>
+	</nav>
+	<div id="main">
+		<a class="two" href="about.html">My Story</a>		
+		<a class="two" href="goals.html">My Goals</a>		
+		<a class="two" href="accomp.html">My Accomplishments</a>
+		<br/>
+		<br/>
+		<br/>
+		<h2>My Accomplishments</h2>
+		<img class="image" src="bground2.jpg"/><!--image from http://www.mrwallpaper.com/view/Lemon-Tea-1920x1200/ and then edited-->
+		<p>
+		<b>Advanced Placement - </b>AP Scholar with Distinction<br/>
+		<b>NMSQT - </b>National Merit Commended Student<br/>
+		<b>Future Business Leaders of America - </b>8th Place at Nationals for 3D Animation<br/>
+		<b>Future Business Leaders of America - </b>9th Place at Nationals for Desktop Publishing<br/>
+		<b><a href = "resume.pdf" style = "text-decoration: none;">Resume </a>- </b>Click to view pdf<br/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='shortcut icon' href='icon.ico' type='image/x-icon'/ >
+<link rel="stylesheet" type="text/css" href="about.css">
+<style>
+	html{
+		height:100%;
+	}
+	body{
+		margin: auto;
+		width: 100%;
+		height:100%;
+		background-image:url("background.jpg"); /*I made this pattern on Adobe Illustrator*/
+		background-size:50%;
+	}
+	h1{
+		color:white;
+		font:50px century gothic;
+		text-align:center;
+	}
+	h2{
+		color:#483c32;
+		font:40px Garamond;
+	}
+	p{
+		color:#483c32;
+		font:24px Garamond;
+	}
+	#header{
+		background-color:#160600;
+		padding:3px;
+	}
+	#icons{
+		float:right;
+	}
+	#main{
+		background-color:white;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 40px black; /*adds drop shadow*/
+		width: 80%;
+		height:100 vh;
+		padding:30px;
+	}
+	#nav{
+		display:inline;
+		position: absolute; 
+		width:100%;
+		text-align:center;
+		padding: 5px 0px 5px 0px;
+		background-color:#4b3832;
+		border-top:3px solid white;
+		border-bottom:3px solid white;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 40px black; /*adds drop shadow*/
+	}
+	#hours{
+		display:inline;
+		position:relative;
+		left:5%;
+	}
+	iframe{
+		width:640px;
+		height:480px;
+		position:relative;
+		top:30%;
+	}
+	fieldset{
+		height:250px;
+		width: 500px;
+		position:relative;
+		float:left;
+	}
+	#thank{
+		height:250px;
+		width: 500px;
+		position:relative;
+		float:left;
+		display:none;
+		background-color:white;
+		z-index:2;
+	}
+</style>
+<title>Contact Me</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var sourceSwap = function () {
+			var $this = $(this);
+			var newSource = $this.data('alt-src');
+			$this.data('alt-src', $this.attr('src'));
+			$this.attr('src', newSource);
+		}
+		$(function () {
+			$('img.icon').hover(sourceSwap, sourceSwap);
+		});
+		$("img.icon").click(function(){
+			alert("Thank you for following Sneha Thakkar");
+		});
+		$(".submit").click(function(){
+			$('#thank').fadeIn(500).removeClass('hidden');
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<div id="icons"> 
+			<img class="icon" data-alt-src="facebookblue.png" src="facebook.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="twitterblue.png" src="twitter.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="googlered.png" src="google.png"style="height:25px; width:25px;"/>
+		</div>
+		<h1>Sneha Thakkar</h1>
+	</div>
+	<nav id="nav">
+		<a class="top" href="index.html">Home</a>		
+		<a class="top" href="about.html">About</a>		
+		<a class="top" href="menu.html">Projects</a>
+		<a class="top" href="contact.html">Contact</a>
+	</nav>
+	<div id="main">
+		<h2>Contact Me</h2>
+		<div id="thank">
+			<h2>Thank you for your contribution!</h2><!--this div is supposed to show up over the form, but it doesn't seem to be working-->
+		</div>
+		<fieldset>
+			<legend align="left">Send me a message</legend>
+				Name:  <input type="text" name="name" style="width:300px;"> <br/>
+				Email: <input type="text" name="email" style="width:300px;"><br/>
+				Message: <br/><textarea name="message" style="height:150px; width:490px;"></textarea>
+			<input type="button" class="submit" value="Submit">
+		</fieldset><br/><br/>
+		<div id="hours">
+			<p>
+			<b>Other contact info</b><br/>
+			Gmail: snehathakkar97@gmail.com<br/>
+			University Email: srthakk2@illinois.edu <br/>
+			LinkedIn: thakkarsneha<br/><br/>
+			<b>Phone: </b>(847)-505-6848
+			<br/>
+			<br/>
+			</p>
+		
+</body>
+</html>
+
+<!--add the button that changes the form div to say thank you-->

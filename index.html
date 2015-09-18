@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<link rel='shortcut icon' href='icon.ico' type='image/x-icon'/ >
+<style>
+	html{
+		height:100%;
+	}
+	body{
+		margin: auto;
+		width: 100%;
+		height:100%;
+		background-image:url("background.jpg"); /*I made this pattern on Adobe Illustrator*/
+		background-size:50%;
+	}
+	#open{
+		background-image: url("bground4.jpg"); /*from http://lookw.ru/eda/191-chay-50-oboev.html*/
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		z-index:2; /*sets this div above the background*/
+	}
+	#circle{
+		position: absolute;
+		top: 20%;
+		left: 34%;
+		width: 375px;
+		height: 375px;
+		padding:25px;
+		box-shadow: 0px 0px 40px; /*adds drop shadow*/
+		background: white;
+		border-radius: 50%;
+		border: 3px solid white;
+		opacity: 0.7;
+		display:none;
+		z-index:3; /*sets this div above the #open div*/
+	}
+	#circle:hover{
+		transform: scale(1.05);
+		transition:0.5s;
+	}
+	h1{
+		color:#483c32;
+		font:50px century gothic;
+		text-align:center;
+	}
+	h2{
+		color:#483c32;
+		font:40px Garamond;
+		text-align:center;
+	}
+	h3{
+		color:#483c32;
+		font:30px Garamond;
+	}
+	.one{
+		color:#483c32;
+		font:30px century gothic;
+		text-align:center;
+	}
+	#header{
+		background-color:#160600;
+		padding:3px;
+	}
+	#icons{
+		float:right;
+	}
+	nav{
+		display:inline;
+		position: absolute; 
+		width:100%;
+		text-align:center;
+		padding: 5px 0px 5px 0px;;
+		background-color:#4b3832;
+		border-top:3px solid white;
+		border-bottom:3px solid white;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 40px black; /*adds drop shadow*/
+	}
+	a{
+		font:20px Century gothic;
+		color:white;
+		padding:5px;
+	}
+	a:hover{
+		background-color:#160600;
+	}
+	a:link{
+		text-decoration:none;
+	}
+	a:visited{
+		text-decoration:none;
+	}
+	#main{
+		background-color:white;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 40px black; /*adds drop shadow*/
+		width:80%;
+		height:100 vh;
+		padding:30px;
+	}
+	#left{
+		max-width: 400px;
+		height:auto;
+		position:relative;
+		float:left;
+	}
+	.two{
+		color:#483c32;
+		font:22px Garamond;
+	}
+	.image{
+		max-width:100%;
+		height:auto;
+		border: 5px solid #160600;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script> 
+	$(document).ready(function(){
+		$('#circle').delay(500).fadeIn(2000).removeClass('hidden'); //for fadeIn() on page load http://stackoverflow.com/questions/21360519/jquery-fadein-on-page-load
+		$('#circle').click(function(){
+			$("#open").slideUp("slow");
+		});
+		var sourceSwap = function () {
+			var $this = $(this);
+			var newSource = $this.data('alt-src');
+			$this.data('alt-src', $this.attr('src'));
+			$this.attr('src', newSource);
+		}
+		$(function () {
+			$('img.icon').hover(sourceSwap, sourceSwap);
+		});
+		$("img.icon").click(function(){
+			alert("Thank you for following Sneha Thakkar");
+		});
+		$(".submit").click(function(){
+			$('#thank').fadeIn(500).removeClass('hidden');
+		});
+	});
+</script> 
+<title>Home Page</title>
+</head>
+<body>
+	<div id="open"> <!--this div will end up showing up every time you press the home button, but I couldn't find a way to do it without parallax scrolling, which we haven't learned-->
+		<div id="circle">
+			<br/>
+			<br/>
+			<h1 style = "position: relative; top: 50px">Sneha Thakkar</h1>
+			<p class="one">Learn more about me!</p>
+			<p class="one" style="font-size:18px">Click to Enter</p>
+		</div>
+	</div>
+	<div id="header">
+		<div id="icons"> 
+			<img class="icon" data-alt-src="facebookblue.png" src="facebook.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="twitterblue.png" src="twitter.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="googlered.png" src="google.png"style="height:25px; width:25px;"/>
+		</div>
+		<h1 style="color:white">Sneha Thakkar</h1>
+	</div>
+	<nav>
+		<a href="index.html">Home</a>		
+		<a href="about.html">About</a>		
+		<a href="menu.html">Projects</a>	
+		<a href="contact.html">Contact</a>
+	</nav>
+	<div id="main">
+		<h2>Hello People</h2>
+		<img class="image" src="bground1.jpg"/>
+			<h3>Go Explore!</h3>
+			<p class="two">Click on the links above to learn more about me. If you wish to contact me, click on 'contact' above.</p>
+		<div id="left">
+			<br/>
+			<br/>
+			<br/>
+		</div>
+	</div>
+</body>
+</html>

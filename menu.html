@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<link rel='shortcut icon' href='icon.ico' type='image/x-icon'/ >
+<style>
+	html{
+		height:100%;
+	}
+	body{
+		margin: auto;
+		width: 100%;
+		height:100%;
+		background-image:url("background.jpg"); /*I made this pattern on Adobe Illustrator*/
+		background-size:50%;
+	}
+	h1{
+		color:white;
+		font:50px century gothic;
+		text-align:center;
+	}
+	h2{
+		color:#483c32;
+		font:40px Garamond;
+	}
+	p{
+		color:#483c32;
+		font:20px century gothic;
+		text-align:center;
+		display:inline;
+	}
+	#header{
+		background-color:#160600;
+		padding:3px;
+	}
+	#icons{
+		float:right;
+	}
+	nav{
+		display:inline;
+		position: absolute; 
+		width:100%;
+		text-align:center;
+		padding: 5px 0px 5px 0px;;
+		background-color:#4b3832;
+		border-top:3px solid white;
+		border-bottom:3px solid white;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 40px black; /*adds drop shadow*/
+	}
+	a{
+		font:20px Century gothic;
+		color:white;
+		padding:5px;
+	}
+	a:hover{
+		background-color:#160600;
+	}
+	a:link{
+		text-decoration:none;
+	}
+	a:visited{
+		text-decoration:none;
+	}
+	#main{
+		background-color:white;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0px 0px 40px black; /*adds drop shadow*/
+		width:80%;
+		height:100 vh;
+		padding:30px;
+	}
+	ul.img-list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	ul.img-list li {
+		display: inline-block;
+		height: 150px;
+		margin: 0 1em 1em 0;
+		position: relative;
+		width: 150px;
+	}
+	span.text-content {
+		background: rgba(0,0,0,0.5);
+		color: white;
+		cursor: pointer;
+		display: table;
+		height: 150px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 150px;
+		opacity:0;
+		-webkit-transition: opacity 500ms;
+		-moz-transition: opacity 500ms;
+		-o-transition: opacity 500ms;
+		transition: opacity 500ms;
+	}
+	span.text-content span {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	ul.img-list li:hover span.text-content {
+		opacity: 1;
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script> 
+	$(document).ready(function(){
+		var sourceSwap = function () {
+			var $this = $(this);
+			var newSource = $this.data('alt-src');
+			$this.data('alt-src', $this.attr('src'));
+			$this.attr('src', newSource);
+		}
+		$(function () {
+			$('img.icon').hover(sourceSwap, sourceSwap);
+		});
+		$("img.icon").click(function(){
+			alert("Thank you for following The Jasmine Dragon");
+		});
+	});
+</script> 
+<title>Menu</title>
+</head>
+<body>
+	<div id="header">
+		<div id="icons"> 
+			<img class="icon" data-alt-src="facebookblue.png" src="facebook.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="twitterblue.png" src="twitter.png"style="height:25px; width:25px;"/>
+			<img class="icon" data-alt-src="googlered.png" src="google.png"style="height:25px; width:25px;"/>
+		</div>
+		<h1>Sneha Thakkar</h1>
+	</div>
+	<nav>
+		<a href="index.html">Home</a>		
+		<a href="about.html">About</a>		
+		<a href="menu.html">Projects</a>		
+		<a href="contact.html">Contact</a>
+	</nav>
+	<div id="main"><!--This is the div with images -->
+			<h2>Traditional Art</h2>
+			<ul class="img-list">
+				<li>
+					<img src="trad1.jpg" />
+					<span class="text-content"><span>Clay Face</span></span>
+				</li>
+				<li>
+					<img src="trad2.jpg" />
+					<span class="text-content"><span>Grandfather Portrait</span></span>
+				</li>
+				<li>
+					<img src="trad3.jpg" />
+					<span class="text-content"><span>Chess Acrylic</span></span>
+				</li>
+				<li>
+					<img src="trad4.jpg" />
+					<span class="text-content"><span>Beach Chalk Pastel</span></span>
+				</li>
+				<li>
+					<img src="trad5.jpg" />
+					<span class="text-content"><span>Self Portrait</span></span>
+				</li>
+				<li>
+					<img src="trad6.jpg" />
+					<span class="text-content"><span>Strawberry Oil Pastel</span></span>
+				</li>
+			</ul>
+			<h2>Computer Generated</h2>
+			<ul class="img-list">
+				<li>
+					<img src="compaid1.jpg" />
+					<span class="text-content"><span>Photomanipulation 1</span></span>
+				</li>
+				<li>
+					<img src="compaid2.jpg" />
+					<span class="text-content"><span>Photomanipulation 2</span></span>
+				</li>
+				<li>
+					<img src="compaid3.jpg" />
+					<span class="text-content"><span>Diwali Poster</span></span>
+				</li>
+				<li>
+					<img src="compaid4.jpg" />
+					<span class="text-content"><span>Book Jacket</span></span>
+				</li>
+				<li>
+					<img src="compaid5.jpg" />
+					<span class="text-content"><span>TSA Precheck Animation</span></span>
+				</li>
+				<li>
+					<img src="compaid6.jpg" />
+					<span class="text-content"><span>Zoo Campaign Poster</span></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+</body>
+</html>
